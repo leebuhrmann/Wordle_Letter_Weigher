@@ -1,18 +1,17 @@
-## Getting Started
+Takes file input of a word list and counts the number of occurences of each letter in each position of each word that can be a correct guess for the game Wordle.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Example using a small list:
 
-## Folder Structure
+Happy,
+Grass,
+Names,
+Words,
+Rusty
 
-The workspace contains two folders by default, where:
+position 1: g - 1, h - 1, n - 1, r - 1, w - 1,  all other letters 0
+position 2: a - 2, o - 1, r - 1, u - 1,         all other letters 0
+position 3: a - 1, m - 1, p - 1, r - 1, s - 1   all other letters 0
+position 4: e - 1, d - 1, p - 1, s - 1, t - 1   all other letters 0
+position 5: s - 3, y - 2                        all other letters 0
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+stores these values in 5 integer arrays (one for each position), index 0 representing the number of occurences of 'a' and index 25 the number of occurences of 'z'.
