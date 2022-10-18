@@ -14,4 +14,26 @@ position 3: a - 1, m - 1, p - 1, r - 1, s - 1   all other letters 0
 position 4: e - 1, d - 1, p - 1, s - 1, t - 1   all other letters 0
 position 5: s - 3, y - 2                        all other letters 0
 
-stores these values in 5 integer arrays (one for each position), index 0 representing the number of occurences of 'a' and index 25 the number of occurences of 'z'.
+And the program will output the data in this format.
+
+POS| 1 | 2 | 3 | 4 | 5 |
+ A | 0 | 2 | 1 | 0 | 0 |
+ ...
+ E | 0 | 0 | 0 | 1 | 0 |
+ ...
+ G | 1 | 0 | 0 | 0 | 0 |
+ H | 1 | 0 | 0 | 0 | 0 |
+ ...
+ M | 0 | 0 | 1 | 0 | 0 |
+ N | 1 | 0 | 0 | 0 | 0 |
+ O | 0 | 1 | 0 | 0 | 0 |
+ P | 0 | 0 | 1 | 1 | 0 |
+ ...
+ R | 1 | 1 | 1 | 0 | 0 |
+ S | 0 | 0 | 1 | 1 | 3 |
+ ...
+ U | 0 | 1 | 0 | 0 | 0 |
+ ...
+ W | 1 | 0 | 0 | 0 | 0 |
+ ...
+ Y | 0 | 0 | 0 | 0 | 2 |

@@ -1,7 +1,6 @@
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
-import java.util.Calendar;
 
 public class App
 {
@@ -12,21 +11,6 @@ public class App
         int[] p3 = new int[26];
         int[] p4 = new int[26];
         int[] p5 = new int[26];
-
-        
-        /*
-         * learning
-         */
-        // p1[0]++;
-        // p2[0]++;
-        // p2[0]++;
-        // System.out.print(p1[0] + " | " + p2[0]);
-        // int ch = 'Z';
-        // System.out.println(" | " + (ch - 65));
-        // System.out.printf("|%3d|\n", 1);
-        // System.out.printf("%c", 0 + 65);
-        // System.exit(0);
-
 
         int num = -1;
         String word = null;
@@ -54,14 +38,19 @@ public class App
                 p3[wordParser[2] - 65]++;
                 p4[wordParser[3] - 65]++;
                 p5[wordParser[4] - 65]++;
+
+                lineParser.close();
             }
+
+            in.close();
         }
         catch(FileNotFoundException fnfe)
         {
             System.out.println("File not found!");
         }
 
-        System.out.printf("\n***|  1  |  2  |  3  |  4  |  5  |***\n");
+
+        System.out.print("\n***|  1  |  2  |  3  |  4  |  5  |***\n");
         for(int i = 0; i < 26; i++)
         {
             System.out.printf(" %c | %3d | %3d | %3d | %3d | %3d |\n"
