@@ -1,6 +1,8 @@
 import java.io.File;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 
 public class App
 {
@@ -18,7 +20,7 @@ public class App
         try
         {
 
-            Scanner in = new Scanner(new File("src/Wordle Answers.txt"));
+            Scanner in = new Scanner(new File("src/Wordle_Answers.txt"));
             in.nextLine(); //skips first line
 
             while(in.hasNextLine() && num < 2314)
@@ -58,5 +60,25 @@ public class App
         }
 
         System.out.printf("\nThe final word scanned was %s and was number %d\n\n", word, num);
+        
+        try
+        {
+            FileOutputStream fileOut = new FileOutputStream("src/Weighted_Wordle_List.txt", false);
+            PrintWriter writer = new PrintWriter(fileOut);
+
+            for(int i = 0; i < 26; i++)
+            {
+                writer.printf("%d, %d, %d, %d, %d\n"
+                                    , p1[i], p2[i], p3[i], p4[i], p5[i]);
+            }
+            writer.close();
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("Could not write to file.");
+        }
+
+        System.out.println("Program terminated.\n");
+        System.exit(0);
     }
 }
