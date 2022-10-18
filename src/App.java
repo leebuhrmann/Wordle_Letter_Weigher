@@ -68,7 +68,7 @@ public class App
 
             for(int i = 0; i < 26; i++)
             {
-                writer.printf("%d, %d, %d, %d, %d\n"
+                writer.printf("%d,%d,%d,%d,%d\n"
                                     , p1[i], p2[i], p3[i], p4[i], p5[i]);
             }
             writer.close();
