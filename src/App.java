@@ -50,7 +50,7 @@ public class App
         }
 
 
-        System.out.print("\n***|  1  |  2  |  3  |  4  |  5  |***\n");
+        System.out.print("\nPOS|  1  |  2  |  3  |  4  |  5  |\n");
         for(int i = 0; i < 26; i++)
         {
             System.out.printf(" %c | %3d | %3d | %3d | %3d | %3d |\n"
