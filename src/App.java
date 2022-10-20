@@ -20,7 +20,7 @@ public class App
         try
         {
 
-            Scanner in = new Scanner(new File("src/Wordle_Answers.txt"));
+            Scanner in = new Scanner(new File("src/Wordle_Dictionary.txt"));
             in.nextLine(); //skips first line
 
             while(in.hasNextLine() && num < 2314)
